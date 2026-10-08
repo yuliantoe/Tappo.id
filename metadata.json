@@ -1,0 +1,6 @@
+{
+  "name": "TapReview ID - Smart NFC Tap & QR Review",
+  "description": "Smart NFC Tap & QR Review standee and card for businesses to boost Google reviews, WhatsApp chats, Instagram, and TikTok followers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

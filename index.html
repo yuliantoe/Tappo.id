@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tappo.id - Smart NFC Tap & QR Review untuk Bisnis Anda</title>
+    <meta name="description" content="tappo.id: Tingkatkan ulasan Google Maps 5 bintang, WhatsApp chat, dan followers media sosial hanya dengan 1 tap contactless NFC atau scan QR. Praktis, tanpa baterai, garansi 1 tahun." />
+    <meta property="og:title" content="tappo.id - Smart NFC Tap & QR Review untuk Bisnis Anda" />
+    <meta property="og:description" content="tappo.id: Tingkatkan ulasan Google Maps 5 bintang, WhatsApp chat, dan followers media sosial hanya dengan 1 tap contactless NFC atau scan QR. Praktis, tanpa baterai, garansi 1 tahun." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Filter out third-party browser extension injection errors (e.g. MetaMask / web3 wallet extension in iframes)
+      window.addEventListener('unhandledrejection', function (event) {
+        var reason = event.reason;
+        var message = (reason && (reason.message || (typeof reason === 'string' ? reason : ''))) || '';
+        if (
+          typeof message === 'string' &&
+          (message.includes('MetaMask') ||
+            message.includes('ethereum') ||
+            message.includes('chrome-extension://') ||
+            message.includes('moz-extension://'))
+        ) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+        }
+      }, true);
+
+      window.addEventListener('error', function (event) {
+        var message = (event && event.message) || '';
+        var filename = (event && event.filename) || '';
+        if (
+          (typeof message === 'string' &&
+            (message.includes('MetaMask') || message.includes('ethereum'))) ||
+          filename.includes('chrome-extension://') ||
+          filename.includes('moz-extension://')
+        ) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+        }
+      }, true);
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-white text-slate-800 font-sans antialiased selection:bg-orange-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
