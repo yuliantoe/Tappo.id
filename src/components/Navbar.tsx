@@ -41,7 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
         </a>
 
         {/* Zone 2: Clean text navigation links */}
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600">
           <a href="#beranda" className="text-[#ff5722] hover:text-[#ff5722] transition-colors">
             Beranda
           </a>
@@ -52,7 +52,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
             Cara Kerja
           </a>
           <a href="#simulator" className="hover:text-[#ff5722] transition-colors">
-            Simulator Tap & Produk
+            Simulator & Produk
+          </a>
+          <a href="#marketplace" className="hover:text-[#ff5722] transition-colors font-bold text-orange-600">
+            Harga (49K & 68K)
           </a>
           <a href="#testimoni" className="hover:text-[#ff5722] transition-colors">
             Testimoni
@@ -111,7 +114,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
               onClick={() => setMobileMenuOpen(false)}
               className="px-3 py-2 rounded-lg hover:bg-orange-50 hover:text-[#ff5722] transition-colors"
             >
-              Simulator Tap & Produk
+              Simulator & Produk
+            </a>
+            <a
+              href="#marketplace"
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-3 py-2 rounded-lg bg-orange-50 text-orange-600 font-bold transition-colors"
+            >
+              Harga Resmi (49K & 68K)
             </a>
             <a
               href="#testimoni"

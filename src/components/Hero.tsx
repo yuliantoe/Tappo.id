@@ -36,6 +36,33 @@ export const Hero: React.FC<HeroProps> = () => {
               Teknologi Smart NFC Tap & QR Standee otomatis mengarahkan pelanggan offline ke Google Review bintang 5, chat WhatsApp, dan media sosial dalam 2 detik tanpa repot mengetik URL.
             </p>
 
+            {/* Official Price & Purchase Channels Banner */}
+            <div className="mt-6 p-4 rounded-2xl bg-gradient-to-r from-orange-50/90 via-amber-50/80 to-emerald-50/90 border border-orange-200/80 shadow-xs w-full max-w-xl">
+              <div className="flex flex-wrap items-center justify-between gap-2 pb-2.5 border-b border-orange-200/50">
+                <span className="text-xs font-bold text-slate-800">Harga Resmi:</span>
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1 text-xs font-extrabold text-[#ff5722] bg-white px-2.5 py-0.5 rounded-full border border-orange-200 shadow-2xs">
+                    Kartu Tap Rp 49K
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-xs font-extrabold text-[#ff5722] bg-white px-2.5 py-0.5 rounded-full border border-orange-200 shadow-2xs">
+                    Standee Akrilik Rp 68K
+                  </span>
+                </div>
+              </div>
+              <div className="pt-2 flex flex-wrap items-center justify-between gap-1 text-[11px] text-slate-600 font-medium">
+                <span>Dapat dibeli di:</span>
+                <div className="flex items-center gap-2 font-bold">
+                  <a href="#marketplace" className="text-[#EE4D2D] hover:underline">Shopee</a>
+                  <span>·</span>
+                  <a href="#marketplace" className="text-[#03AC0E] hover:underline">Tokopedia</a>
+                  <span>·</span>
+                  <a href="#marketplace" className="text-slate-900 hover:underline">TikTok Shop</a>
+                  <span>·</span>
+                  <a href="#marketplace" className="text-[#25D366] hover:underline">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+
             {/* Clean unboxed proof markers */}
             <div className="mt-8 pt-6 border-t border-slate-100 w-full flex flex-wrap items-center gap-y-2 gap-x-4 text-xs text-slate-500 font-medium">
               <span className="flex items-center gap-1.5 text-slate-700">

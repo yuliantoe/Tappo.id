@@ -91,7 +91,7 @@ Mohon info ketersediaan stok, konsultasi logo toko, dan preview desain mockup se
           <p className="text-xs text-slate-500 mt-1">
             Isi data di bawah untuk langsung terhubung dengan Admin WhatsApp resmi tappo.id.
           </p>
-          <div className="mt-2.5">
+          <div className="mt-2.5 flex items-center gap-2 flex-wrap">
             <a
               href={createWhatsAppUrl('Halo Admin tappo.id! 👋 Saya ingin konsultasi pemesanan perangkat ulasan langsung.')}
               target="_blank"
@@ -99,8 +99,19 @@ Mohon info ketersediaan stok, konsultasi logo toko, dan preview desain mockup se
               className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 px-3 py-1.5 rounded-xl transition-colors cursor-pointer"
             >
               <MessageCircle className="w-3.5 h-3.5 fill-emerald-600" />
-              <span>Chat Langsung Admin WhatsApp</span>
+              <span>Chat WhatsApp Langsung</span>
             </a>
+          </div>
+
+          <div className="mt-3 p-2.5 rounded-xl bg-orange-50/70 border border-orange-200/60 flex items-center justify-between flex-wrap gap-2 text-[11px]">
+            <span className="text-slate-600 font-medium">Pilihan Marketplace:</span>
+            <div className="flex items-center gap-2 font-bold">
+              <a href="https://shopee.co.id/search?keyword=tappo.id" target="_blank" rel="noopener noreferrer" className="text-[#EE4D2D] hover:underline">Shopee</a>
+              <span>·</span>
+              <a href="https://www.tokopedia.com/search?q=tappo.id" target="_blank" rel="noopener noreferrer" className="text-[#03AC0E] hover:underline">Tokopedia</a>
+              <span>·</span>
+              <a href="https://www.tiktok.com/search?q=tappo.id" target="_blank" rel="noopener noreferrer" className="text-slate-900 hover:underline">TikTok Shop</a>
+            </div>
           </div>
         </div>
 
@@ -116,17 +127,17 @@ Mohon info ketersediaan stok, konsultasi logo toko, dan preview desain mockup se
               onChange={(e) => setSelectedPackage(e.target.value)}
               className="w-full rounded-xl bg-slate-50 border border-slate-200 px-3.5 py-2.5 text-xs text-slate-900 focus:border-[#ff5722] focus:bg-white focus:outline-none"
             >
-              <option value="Kartu Tap NFC & QR - Black Edition">
-                Kartu Tap NFC & QR - Black Edition
+              <option value="Kartu Tap NFC & QR - Black Edition (Rp 49.000)">
+                Kartu Tap NFC & QR - Black Edition (Rp 49.000 / 49K)
               </option>
-              <option value="Kartu Tap NFC & QR - Blue Ocean">
-                Kartu Tap NFC & QR - Blue Ocean
+              <option value="Kartu Tap NFC & QR - Blue Ocean (Rp 49.000)">
+                Kartu Tap NFC & QR - Blue Ocean (Rp 49.000 / 49K)
               </option>
-              <option value="Standee Akrilik Meja Google Review">
-                Standee Akrilik Meja Google Review
+              <option value="Standee Akrilik Meja Google Review (Rp 68.000)">
+                Standee Akrilik Meja Google Review (Rp 68.000 / 68K)
               </option>
-              <option value="Order Kustom / Multi-Cabang">
-                Order Kustom / Multi-Cabang
+              <option value="Order Kustom / Grosir Multi-Cabang">
+                Order Kustom / Grosir Multi-Cabang
               </option>
             </select>
           </div>

@@ -15,6 +15,8 @@ export const InteractiveTapSimulator: React.FC = () => {
       id: 'dual-nfc-qr-black',
       title: 'Kartu Tap NFC & QR - Black Edition',
       badge: 'Desain "Review Us on Google"',
+      price: 'Rp 49.000',
+      priceTag: '49K',
       description: 'Kartu hitam elegan dengan logo Google, 5 bintang emas, ikon Tap your phone NFC di sisi kiri dan Scan QR code di sisi kanan.',
       image: '/src/assets/images/nfc_card_black_google_qr_1791379823355.jpg',
       specs: ['Chip NFC NTAG216 Aktif', 'Dynamic QR Code Presisi', 'Logo Google & 5 Bintang Emas'],
@@ -23,6 +25,8 @@ export const InteractiveTapSimulator: React.FC = () => {
       id: 'dual-nfc-qr-blue',
       title: 'Kartu Tap NFC & QR - Blue Ocean',
       badge: '"Bantu Kami Dengan Google Review"',
+      price: 'Rp 49.000',
+      priceTag: '49K',
       description: 'Model dual tone biru-putih dengan teks bahasa Indonesia ramah pelanggan, dilengkapi simbol Tap your phone NFC dan Scan QR code.',
       image: '/src/assets/images/nfc_card_blue_google_qr_1791379844767.jpg',
       specs: ['Desain Dual Tone Biru Putih', 'Tap Phone NFC + Scan QR Code', 'Tahan Tumpahan Air & Minyak'],
@@ -31,6 +35,8 @@ export const InteractiveTapSimulator: React.FC = () => {
       id: 'acrylic-standee-google',
       title: 'Standee Akrilik Meja Google Review',
       badge: '"Bantu Kami Dengan Google Review"',
+      price: 'Rp 68.000',
+      priceTag: '68K',
       description: 'Standee vertikal akrilik dengan header lengkung biru, logo Google besar, 5 bintang emas, instruksi Tap to Scan NFC dan kode QR meja kasir.',
       image: '/src/assets/images/standee_akrilik_google_bantu_kami_1791380227812.jpg',
       specs: ['Bahan Akrilik Kristal Bening 3mm', 'Desain Resmi "Bantu Kami Dengan Google Review"', 'NFC Tap to Scan + Dynamic QR Code'],
@@ -90,6 +96,9 @@ export const InteractiveTapSimulator: React.FC = () => {
                   <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-[#ff5722] shadow-sm">
                     {item.badge}
                   </div>
+                  <div className="absolute bottom-2.5 right-2.5 bg-slate-900/90 text-white backdrop-blur-md px-2.5 py-1 rounded-xl text-xs font-black shadow-md flex items-center gap-1">
+                    <span>{item.price}</span>
+                  </div>
                 </div>
 
                 <div className="mb-1">
@@ -98,21 +107,50 @@ export const InteractiveTapSimulator: React.FC = () => {
                   </h4>
                 </div>
 
+                {/* Price Display */}
+                <div className="flex items-baseline justify-between mb-2">
+                  <div className="flex items-baseline gap-1">
+                    <span className="font-display font-black text-xl text-[#ff5722]">
+                      {item.price}
+                    </span>
+                    <span className="text-[10px] text-slate-400 font-semibold">({item.priceTag})</span>
+                  </div>
+                  <span className="text-[10px] font-extrabold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    Ready Stock
+                  </span>
+                </div>
+
                 <p className="text-xs text-slate-500 leading-relaxed mb-3">
                   {item.description}
                 </p>
               </div>
 
-              {/* Specs pill badges */}
-              <div className="pt-3 border-t border-slate-100 flex flex-wrap gap-1.5">
-                {item.specs.map((spec, sIdx) => (
-                  <span
-                    key={sIdx}
-                    className="text-[10px] font-semibold bg-orange-50 text-slate-700 px-2 py-0.5 rounded-md"
-                  >
-                    ✓ {spec}
-                  </span>
-                ))}
+              <div>
+                {/* Specs pill badges */}
+                <div className="pt-3 border-t border-slate-100 flex flex-wrap gap-1.5 mb-2.5">
+                  {item.specs.map((spec, sIdx) => (
+                    <span
+                      key={sIdx}
+                      className="text-[10px] font-semibold bg-orange-50 text-slate-700 px-2 py-0.5 rounded-md"
+                    >
+                      ✓ {spec}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Purchase Channels availability line */}
+                <div className="pt-2 border-t border-slate-100/80 flex items-center justify-between text-[10px] text-slate-500">
+                  <span className="font-semibold text-slate-400">Beli di:</span>
+                  <div className="flex items-center gap-1.5 font-bold">
+                    <span className="text-[#EE4D2D]">Shopee</span>
+                    <span>·</span>
+                    <span className="text-[#03AC0E]">Tokopedia</span>
+                    <span>·</span>
+                    <span className="text-slate-900">TikTok</span>
+                    <span>·</span>
+                    <span className="text-[#25D366]">WA</span>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
@@ -178,12 +216,22 @@ export const InteractiveTapSimulator: React.FC = () => {
           <div className="lg:col-span-6 flex flex-col items-start text-left space-y-5">
             <div className="p-6 sm:p-7 rounded-3xl bg-[#fff9f5] border border-orange-100 w-full shadow-xl shadow-orange-950/5">
               <div className="flex items-center justify-between pb-3 mb-4 border-b border-orange-200/50">
-                <span className="text-xs font-bold text-slate-800">
-                  {hardwareExamples[selectedHardware].title}
-                </span>
-                <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-600">
+                <div>
+                  <span className="text-xs font-bold text-slate-800 block">
+                    {hardwareExamples[selectedHardware].title}
+                  </span>
+                  <div className="flex items-baseline gap-2 mt-0.5">
+                    <span className="font-display text-xl font-black text-[#ff5722]">
+                      {hardwareExamples[selectedHardware].price}
+                    </span>
+                    <span className="text-[10px] text-slate-500 font-semibold">
+                      (Bisa beli di Shopee, Tokopedia, TikTok & WA)
+                    </span>
+                  </div>
+                </div>
+                <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
                   <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping" />
-                  NFC & QR Code Aktif
+                  NFC & QR Aktif
                 </span>
               </div>
 

@@ -9,6 +9,7 @@ import { Hero } from './components/Hero';
 import { ServicesRow } from './components/ServicesRow';
 import { MiddleHighlight } from './components/MiddleHighlight';
 import { InteractiveTapSimulator } from './components/InteractiveTapSimulator';
+import { MarketplaceChannels } from './components/MarketplaceChannels';
 import { AgencySection } from './components/AgencySection';
 import { ComparisonSection } from './components/ComparisonSection';
 import { Testimonials } from './components/Testimonials';
@@ -61,6 +62,9 @@ export default function App() {
 
         {/* 5. Interactive Smartphone NFC Simulator & Real Product Examples */}
         <InteractiveTapSimulator />
+
+        {/* 5.5. Official Marketplace & WhatsApp Purchase Channels */}
+        <MarketplaceChannels onOpenOrderModal={() => handleOpenOrderModal('Konsultasi Pemesanan')} />
 
         {/* 6. "Our Agency / Technology" Split Section with 3D Desk Illustration */}
         <AgencySection onOpenOrderModal={() => handleOpenOrderModal('Konsultasi Kustom Standee')} />

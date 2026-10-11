@@ -26,8 +26,12 @@ export const Faq: React.FC = () => {
       a: 'Sangat aman! Material akrilik dan kayu solid kami dilapisi coating proteksi anti gores dan anti air (waterproof). Standee tahan terhadap tumpahan kuah makanan, kopi, sirup, serta aman dibersihkan dengan lap sanitizer setiap hari.',
     },
     {
+      q: 'Berapa harga perangkat dan di mana saya bisa membelinya?',
+      a: 'Harga resmi Kartu Tap NFC ulasan Google adalah Rp 49.000 (49K) dan Standee Akrilik Meja adalah Rp 68.000 (68K). Anda dapat memesan melalui marketplace resmi kami di Shopee, Tokopedia, TikTok Shop, atau langsung pesan instan via WhatsApp ke 0851-5974-6119.',
+    },
+    {
       q: 'Bagaimana cara pemesanan dan pengiriman data toko saya?',
-      a: 'Cukup klik tombol "Pesan Sekarang" atau "Pesan via WhatsApp", lalu kirimkan Nama Bisnis dan Link Google Maps / WhatsApp / Media Sosial Anda ke CS kami. Tim kami akan menyiapkan mockup preview sebelum dicetak.',
+      a: 'Cukup lakukan checkout di marketplace pilihan Anda (Shopee, Tokopedia, TikTok Shop) atau klik "Pesan via WA", lalu kirimkan Nama Bisnis dan Link Google Maps Anda. Tim kami akan menyiapkan setting chip NFC dan print QR Code siap pakai.',
     },
   ];
 

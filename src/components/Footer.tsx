@@ -124,13 +124,20 @@ export const Footer: React.FC<FooterProps> = ({ onOpenOrderModal }) => {
                 <span>Kirim Seluruh Indonesia via JNE/SiCepat/J&T</span>
               </div>
             </div>
-            <div className="pt-2">
+            <div className="pt-2 space-y-2">
               <button
                 onClick={onOpenOrderModal}
                 className="w-full py-2.5 px-4 rounded-xl bg-white hover:bg-orange-50 text-[#ff5722] font-bold text-xs border border-orange-200 shadow-xs transition-colors cursor-pointer text-center flex items-center justify-center gap-2"
               >
                 <span>Konsultasi Pemesanan</span>
               </button>
+              <div className="text-[11px] text-slate-500 text-center">
+                <span>Tersedia di: </span>
+                <span className="font-bold text-[#EE4D2D]">Shopee</span> · 
+                <span className="font-bold text-[#03AC0E]"> Tokopedia</span> · 
+                <span className="font-bold text-slate-900"> TikTok</span> · 
+                <span className="font-bold text-[#25D366]"> WA</span>
+              </div>
             </div>
           </div>
 
